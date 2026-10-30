@@ -1,19 +1,36 @@
 {
-  "include": ["client/src/**/*", "shared/**/*", "server/**/*", "express.d.ts"],
-  "exclude": ["node_modules", "build", "dist", "**/*.test.ts"],
+  "include": [
+    "client/src/**/*",
+    "shared/**/*",
+    "server/**/*",
+    "types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "**/*.test.ts"
+  ],
   "compilerOptions": {
     "target": "ES2022",
+    "jsx": "react-jsx",
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
-    "noEmit": false,
+    "noEmit": true,
     "module": "ESNext",
-    "strict": false,
+    "moduleResolution": "Bundler",
+    "strict": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
-    "types": ["node", "express", "vite/client"],
+    "types": [
+      "node",
+      "express",
+      "vite/client"
+    ],
     "paths": {
       "@/*": ["./client/src/*"],
       "@shared/*": ["./shared/*"]

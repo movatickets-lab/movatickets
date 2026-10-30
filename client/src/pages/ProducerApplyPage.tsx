@@ -10,7 +10,7 @@ import { trpc } from "@/lib/trpc";
 
 export default function ProducerApplyPage() {
   const me = trpc.auth.me.useQuery();
-  const apply = trpc.ticketing.producer.apply.useMutation({ onError: e => toast.error(e.message) });
+  const apply = trpc.ticketing.producer.applyProducer.useMutation({ onError: e => toast.error(e.message) });
   const [f, setF] = useState({ legalName: "", responsibleName: "", document: "", email: "", phone: "", city: "", instagram: "", website: "", description: "" });
   const [accepted, setAccepted] = useState(false);
   const set = (k: keyof typeof f) => (e: { target: { value: string } }) => setF(p => ({ ...p, [k]: e.target.value }));
