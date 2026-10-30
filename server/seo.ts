@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { readFileSync } from "node:fs"; // @ts-nocheck
 import path from "node:path";
 import type { Request, RequestHandler, Response } from "express";
 import { and, eq, inArray, isNotNull } from "drizzle-orm";

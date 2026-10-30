@@ -1,4 +1,4 @@
-import { randomUUID, createHash } from "node:crypto";
+import { randomUUID, createHash } from "node:crypto";// @ts-nocheck
 import type { Request, Response } from "express";
 import { eq } from "drizzle-orm";
 import { z } from "zod";

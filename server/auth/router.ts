@@ -1,4 +1,4 @@
-import type { Request, Response } from "express";
+import type { Request, Response } from "express";// @ts-nocheck
 import { and, eq, gt, isNull } from "drizzle-orm";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";

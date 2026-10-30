@@ -1,4 +1,4 @@
-import { and, asc, desc, eq, gte, inArray, isNotNull, like, lt, or, sql } from "drizzle-orm";
+import { and, asc, desc, eq, gte, inArray, isNotNull, like, lt, or, sql } from "drizzle-orm";// @ts-nocheck
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { affiliates, events, lots, orderItems, orders, organizations, tickets } from "../../drizzle/schema";

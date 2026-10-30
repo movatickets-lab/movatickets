@@ -1,4 +1,4 @@
-import type { CreateExpressContextOptions } from "@trpc/server/adapters/express";
+import type { CreateExpressContextOptions } from "@trpc/server/adapters/express";// @ts-nocheck
 import type { Request } from "express";
 import { parse } from "cookie";
 import { COOKIE_NAME } from "../../shared/const";

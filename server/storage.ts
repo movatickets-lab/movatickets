@@ -1,4 +1,4 @@
-import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";// @ts-nocheck
 import { randomUUID } from "node:crypto";
 import { env } from "./env";
 

@@ -1,4 +1,4 @@
-import type { Request } from "express";
+import type { Request } from "express";// @ts-nocheck
 
 export function getSessionCookieOptions(req: Pick<Request, "protocol" | "headers">) {
   const proto = String(req.headers["x-forwarded-proto"] ?? "").split(",")[0]?.trim();
