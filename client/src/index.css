@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+/* Aurora Urbana — tokens. Laranja MOVA = ação; azul/verde organizam informação (sempre com rótulo/ícone). */
+@theme {
+  --color-brand: #BF4A15;
+  --color-brand-dark: #9A3A0E;
+  --color-brand-soft: #FBEDE5;
+  --color-sky: #159ABF;
+  --color-sky-ink: #0B6F8A;
+  --color-leaf: #15BF74;
+  --color-leaf-ink: #0B7A4A;
+  --color-cocoa: #402F27;
+  --color-petrol: #273A40;
+  --color-paper: #FFFFFF;
+  --color-mist: #F6F1ED;
+  --color-line: #E3D8D0;
+  --color-danger: #B3261E;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--color-paper); color: #1C1613; font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+.num { font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 3px solid var(--color-sky); outline-offset: 2px; }
+
+/* Canhoto de ingresso: recorte sutil nas laterais. */
+.ticket-notch { position: relative; }
+.ticket-notch::before, .ticket-notch::after { content: ""; position: absolute; top: 50%; width: 16px; height: 16px; border-radius: 9999px; background: var(--color-paper); border: 1px solid var(--color-line); transform: translateY(-50%); }
+.ticket-notch::before { left: -9px; } .ticket-notch::after { right: -9px; }
+
+.fade-in { animation: fade-in .25s ease-out both; }
+@keyframes fade-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
